@@ -3,7 +3,7 @@ package ru.lilmoon;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
     private String surname;
     private String name;
     private String middleName;
@@ -80,5 +80,23 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() +'\''+
+                "surname='" + surname + '\'' +
+                ", name='" + name + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", position='" + position + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", salary=" + salary +
+                ", birthDate=" + birthDate +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        return this.getSurname().compareTo(o.getSurname());
     }
 }
