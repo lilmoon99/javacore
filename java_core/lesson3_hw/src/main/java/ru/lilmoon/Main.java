@@ -8,6 +8,11 @@ import java.util.Collections;
 public class Main {
     public static void main(String[] args) {
 //        task2();
+//        task1();
+
+    }
+
+    private static void task1() {
         ArrayList<Employee> employees = initEmployeeArrayList();
         for (Employee employee : employees) {
             System.out.println(employee);
@@ -17,7 +22,6 @@ public class Main {
         for (Employee employee : employees) {
             System.out.println(employee);
         }
-
     }
 
     private static void task2() {
