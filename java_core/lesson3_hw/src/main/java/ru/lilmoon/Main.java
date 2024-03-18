@@ -3,9 +3,24 @@ package ru.lilmoon;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
+//        task2();
+        ArrayList<Employee> employees = initEmployeeArrayList();
+        for (Employee employee : employees) {
+            System.out.println(employee);
+        }
+        System.out.println("-----------------------------------");
+        employees.sort(new EmployeeSurnameComparator());
+        for (Employee employee : employees) {
+            System.out.println(employee);
+        }
+
+    }
+
+    private static void task2() {
         ArrayList<Employee> employees = initEmployeeArrayList();
         for (Employee employee : employees) {
             System.out.println(employee);
@@ -15,7 +30,6 @@ public class Main {
         for (Employee employee : employees) {
             System.out.println(employee);
         }
-
     }
 
     public static ArrayList<Employee> initEmployeeArrayList(){
