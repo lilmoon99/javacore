@@ -21,4 +21,8 @@ public class Manager extends Employee{
             }
         }
     }
+
+    public void assign(Employee employee,Task task){
+        employee.assign(task);
+    }
 }

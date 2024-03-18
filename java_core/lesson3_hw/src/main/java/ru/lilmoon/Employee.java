@@ -2,8 +2,9 @@ package ru.lilmoon;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 
-public class Employee implements Comparable<Employee>{
+public class Employee implements Comparable<Employee>,Assignable{
     private String surname;
     private String name;
     private String middleName;
@@ -11,6 +12,8 @@ public class Employee implements Comparable<Employee>{
     private String phoneNumber;
     private int salary;
     private LocalDate birthDate;
+
+    private final ArrayList<Task> tasks = new ArrayList<>();
 
     public Employee(String surname, String name, String middleName, String position, String phoneNumber, int salary, LocalDate birthDate) {
         this.surname = surname;
@@ -98,5 +101,14 @@ public class Employee implements Comparable<Employee>{
     @Override
     public int compareTo(Employee o) {
         return this.getSurname().compareTo(o.getSurname());
+    }
+
+    @Override
+    public void assign(Task task) {
+        this.tasks.add(task);
+    }
+
+    public ArrayList<Task> getTasks() {
+        return tasks;
     }
 }

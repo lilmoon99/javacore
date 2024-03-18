@@ -9,6 +9,14 @@ public class Main {
     public static void main(String[] args) {
 //        task2();
 //        task1();
+        Manager manager = new Manager("Shamsullin","Aynur","Damirovich","super admin", "+79911944602",160000, LocalDate.of(1999,1,25));
+        manager.assign(new Task("Перекладка JSON'ов",LocalDate.of(2024,3,18),LocalDate.of(2024,3,29)));
+        Worker worker = new Worker("Ivanov", "Ivan", "Ivanovich",
+                "backend-developer", "+7-999-888-77-66", 100,
+                LocalDate.of(1940, 10, 17));
+        manager.assign(worker,new Task("Сделать парсер JSON'ов",LocalDate.of(2024,1,18),LocalDate.of(2024,3,18)));
+        System.out.println(manager.getTasks());
+        System.out.println(worker.getTasks());
 
     }
 

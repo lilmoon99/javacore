@@ -10,7 +10,7 @@ public class Task {
 
     static int idCounter = 0;
 
-    public Task(int taskId, String taskName, LocalDate taskBeginningDate, LocalDate taskExpirationDate) {
+    public Task(String taskName, LocalDate taskBeginningDate, LocalDate taskExpirationDate) {
         idCounter++;
         this.taskId = idCounter;
         this.taskName = taskName;
