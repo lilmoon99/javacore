@@ -6,11 +6,13 @@ public class User {
     private String name;
     private int age;
     private String phone;
+    private Gender gender;
 
-    public User(String name, int age, String phone) {
+    public User(String name, int age, String phone,Gender gender) {
         this.name = name;
         this.age = age;
         this.phone = phone;
+        this.gender = gender;
     }
 
     public String getName() {
@@ -35,7 +37,13 @@ public class User {
 
     public void setPhone(String phone) {
         this.phone = phone;
+
     }
+
+    public Gender getGender() {
+        return gender;
+    }
+
 
     @Override
     public String toString() {
@@ -43,6 +51,7 @@ public class User {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", phone='" + phone + '\'' +
+                ", gender=" + gender +
                 '}';
     }
 
