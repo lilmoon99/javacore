@@ -29,6 +29,10 @@ public class Order {
         products.put(product, quantity);
     }
 
+    public Map<Product, Integer> getProducts() {
+        return products;
+    }
+
     @Override
     public String toString() {
         return "Order{" +
